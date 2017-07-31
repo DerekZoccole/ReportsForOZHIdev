@@ -7,5 +7,7 @@ namespace ReportsForOZHIdev.Models
     {
         public ClientsContext() : base("ReportsForOZHIdev") { }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<Report> Reports { get; set; }
+        public DbSet<WorkItem> WorkItems { get; set; }
     }
 }

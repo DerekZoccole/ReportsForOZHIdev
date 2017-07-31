@@ -1,18 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using ReportsForOZHIdev.Models;
+using System.Collections.Generic;
 
 namespace ReportsForOZHIdev.Models
 {
-    public class Client
+    public class Report
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
+        public int IDReport { get; set; }
+
         public int IDClient { get; set; }
 
-        public int IDUser { get; set; }
-        
         public string FirstNationName { get; set; }
-        
+
         public string FirstNationContactName { get; set; }
 
         public string ApplicantName { get; set; }
@@ -35,14 +37,6 @@ namespace ReportsForOZHIdev.Models
 
         public string EnvironmentalConcerns { get; set; }
 
-        public double? GST { get; set; }
-
-        public double? PST { get; set; }
-
-        public double? TotalLabour { get; set; }
-
-        public double? TotalMaterial { get; set; }
-
-        public double? GrandTotal { get; set; }
+        public List<WorkItem> WorkItems { get; set; }
     }
 }

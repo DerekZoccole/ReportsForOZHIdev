@@ -408,8 +408,11 @@
     <Compile Include="Logic\AddClients.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ClientsContext.cs" />
+    <Compile Include="Models\Report.cs" />
+    <Compile Include="Models\ReportActions.cs" />
     <Compile Include="Models\ReportsDatabaseInitializer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\WorkItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
