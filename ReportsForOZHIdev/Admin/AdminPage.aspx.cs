@@ -14,8 +14,13 @@ namespace ReportsForOZHIdev.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RoleActions roleActions = new RoleActions();
-            //List<ApplicationUser> users = roleActions.GetUserList();
+
+        }
+
+        public List<User> GetUserList()
+        {
+            ClientsContext context = new ClientsContext();
+            return context.Users.ToList();
         }
     }
 }

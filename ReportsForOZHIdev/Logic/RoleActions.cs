@@ -48,20 +48,19 @@ namespace ReportsForOZHIdev.Logic
             if (!userMgr.IsInRole(userMgr.FindByEmail("derekzoccole@hotmail.com").Id, "canEdit"))
             {
                 IdUserResult = userMgr.AddToRole(userMgr.FindByEmail("derekzoccole@hotmail.com").Id, "canEdit");
-            }
 
-            var userList = context.Users.ToList();
-            using (var _db = new ReportsForOZHIdev.Models.ClientsContext())
-            {
-                var myUser = new User();
-                var user = userMgr.FindByEmail("derekzoccole@hotmail.com");
-                myUser.UserID = user.Id;
-                myUser.Username = user.UserName;
-                myUser.Email = user.Email;
-                myUser.PasswordHash = user.PasswordHash;
+                using (var _db = new ReportsForOZHIdev.Models.ClientsContext())
+                {
+                    var myUser = new User();
+                    var user = userMgr.FindByEmail("derekzoccole@hotmail.com");
+                    myUser.UserId = user.Id;
+                    myUser.Username = user.UserName;
+                    myUser.Email = user.Email;
+                    myUser.PasswordHash = user.PasswordHash;
 
-                _db.Users.Add(myUser);
-                _db.SaveChanges();
+                    _db.Users.Add(myUser);
+                    _db.SaveChanges();
+                }
             }
         }
     }

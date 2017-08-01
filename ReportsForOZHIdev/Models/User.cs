@@ -4,7 +4,7 @@ namespace ReportsForOZHIdev.Models
 {
     public class User
     {
-        public string UserID { get; set; }
+        public string UserId { get; set; }
 
         public string Username { get; set; }
         
