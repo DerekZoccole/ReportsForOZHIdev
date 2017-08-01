@@ -9,5 +9,6 @@ namespace ReportsForOZHIdev.Models
         public DbSet<Client> Clients { get; set; }
         public DbSet<Report> Reports { get; set; }
         public DbSet<WorkItem> WorkItems { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }

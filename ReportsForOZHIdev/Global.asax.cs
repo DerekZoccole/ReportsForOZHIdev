@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Data.Entity;
 using ReportsForOZHIdev.Models;
+using ReportsForOZHIdev.Logic;
 
 namespace ReportsForOZHIdev
 {
@@ -21,6 +22,10 @@ namespace ReportsForOZHIdev
 
             // Initialize database
             Database.SetInitializer(new ReportsDatabaseInitializer());
+
+            // Create custom role and user
+            RoleActions roleActions = new RoleActions();
+            roleActions.AddUserAndRole();
         }
     }
 }
