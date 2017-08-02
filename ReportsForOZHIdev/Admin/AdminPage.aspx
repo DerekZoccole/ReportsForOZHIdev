@@ -7,15 +7,16 @@
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <a href="../Account/Manage.aspx">
+                    <a href="../Users.aspx?IDUser=<%#:Item.IDUser %>">
                         <img src="../Images/pencil.svg" width="25" height="25" style="border:solid"  />
                     </a>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="UserID" HeaderText="UserID" />
-            <asp:BoundField DataField="Username" HeaderText="Username" />
+            <asp:BoundField DataField="IDUser" HeaderText="User ID" />
             <asp:BoundField DataField="Email" HeaderText="Email" />
-            <asp:BoundField DataField="PasswordHash" HeaderText="Password Hash" />
+            <asp:BoundField DataField="FirstName" HeaderText="First Name" />
+            <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+            <asp:BoundField DataField="Company" HeaderText="Company" />
         </Columns>
     </asp:GridView>
 </asp:Content>

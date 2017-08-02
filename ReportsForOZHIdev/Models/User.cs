@@ -1,9 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ReportsForOZHIdev.Models
 {
     public class User
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
+        public int IDUser { get; set; }
+
         public string UserId { get; set; }
 
         public string Username { get; set; }

@@ -23,7 +23,7 @@ namespace ReportsForOZHIdev
             // Initialize database
             Database.SetInitializer(new ReportsDatabaseInitializer());
 
-            // Create custom role and user
+            // Create roles and admin user
             RoleActions roleActions = new RoleActions();
             roleActions.AddUserAndRole();
         }
