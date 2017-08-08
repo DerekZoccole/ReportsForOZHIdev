@@ -62,11 +62,11 @@ namespace ReportsForOZHIdev.Logic
                 myUser.LastName = "Zoccole";
                 myUser.Company = "OZHI";
 
-                if (_db.Users.Local.Any(e => e.UserId == user.Id))
-                {
+                //if (_db.Users.Local.Any(e => e.UserId == user.Id))
+                //{
                     _db.Users.Add(myUser);
                     _db.SaveChanges();
-                }
+                //}
             }
         }
 

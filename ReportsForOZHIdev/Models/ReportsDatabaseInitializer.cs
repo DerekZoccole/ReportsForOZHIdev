@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace ReportsForOZHIdev.Models
 {
-    public class ReportsDatabaseInitializer : DropCreateDatabaseIfModelChanges<ClientsContext>
+    public class ReportsDatabaseInitializer : DropCreateDatabaseAlways<ClientsContext>
     {
         protected override void Seed(ClientsContext context)
         {

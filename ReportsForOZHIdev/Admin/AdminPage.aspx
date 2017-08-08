@@ -7,7 +7,8 @@
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <a href="../Users.aspx?IDUser=<%#:Item.IDUser %>">
+                    <!--<a href="../Users.aspx?IDUser=<%#:Item.IDUser %>">-->
+                    <a href="../Account/Manage.aspx">
                         <img src="../Images/pencil.svg" width="25" height="25" style="border:solid"  />
                     </a>
                 </ItemTemplate>
